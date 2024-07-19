@@ -1,16 +1,16 @@
-import { Linking } from "react-native";
+import {Linking} from 'react-native';
 
 const reviewPage = () => {
   const reviewPageURL =
-    "https://play.google.com/store/apps/details?id=com.unarest.WineCalendar";
+    'https://play.google.com/store/apps/details?id=com.winecalendar';
 
   Linking.openURL(reviewPageURL)
-    .then((supported) => {
+    .then(supported => {
       if (!supported) {
-        console.log("Не удалось открыть страницу отзывов в Google Play Store");
+        console.log('Не удалось открыть страницу отзывов в Google Play Store');
       }
     })
-    .catch((err) => console.error("Ошибка при открытии ссылки: ", err));
+    .catch(err => console.error('Ошибка при открытии ссылки: ', err));
 };
 
 export default reviewPage;
