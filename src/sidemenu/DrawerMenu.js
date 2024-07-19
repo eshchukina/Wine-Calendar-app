@@ -9,14 +9,13 @@ import HorizontalLine from '../components/HorizontalLine';
 import ToggleSwitch from 'toggle-switch-react-native';
 import IconButton from '../buttons/IconButton';
 import shareApp from '../utils/shareApp';
-import rateApp from '../utils/rateApp';
 import reviewPage from '../utils/reviewApp';
 import ModalInstructions from '../modal/ModalInstructions';
 import {useTranslation} from 'react-i18next';
 import i18n from '../translation/i18n';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export default function DrawerMenu({onClose}) {
+export default function DrawerMenu({}) {
   const [isEnabled, setIsEnabled] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
   const {t} = useTranslation();
@@ -42,6 +41,9 @@ export default function DrawerMenu({onClose}) {
           setIsEnabled(newState);
           const newLang = newState ? 'en' : 'ru';
           i18n.changeLanguage(newLang);
+        } else {
+          setIsEnabled(true);
+          i18n.changeLanguage('en');
         }
       } catch (error) {
         console.error('Failed to load switch state', error);
@@ -73,7 +75,7 @@ export default function DrawerMenu({onClose}) {
 
   const handleButtonPress = () => {
     const url =
-      'https://www.freeprivacypolicy.com/live/db0aca65-9d2b-40d2-b9aa-71570d35e9a6';
+      'https://www.freeprivacypolicy.com/live/3e079c31-e8bd-42cd-8c12-1c8a11f449af';
     Linking.openURL(url).catch(err => console.error("Couldn't load page", err));
   };
 
@@ -83,13 +85,12 @@ export default function DrawerMenu({onClose}) {
         <HorizontalLine />
 
         <Image
-          source={require('../../assets/logoWine.png')}
+          source={require('../../assets/logoWineBar.png')}
           style={styles.image}
         />
+        <HorizontalLine />
       </View>
       <View style={styles.container}>
-        <HorizontalLine />
-
         <View>
           <View style={styles.switchContainer}>
             <Text style={styles.textTitle}>ru</Text>
@@ -115,13 +116,7 @@ export default function DrawerMenu({onClose}) {
             onPress={shareApp}
           />
         </View>
-        <View style={styles.button}>
-          <IconButton
-            iconComponent={<Star name="star" size={30} color="#221712" />}
-            text={t('rate')}
-            onPress={rateApp}
-          />
-        </View>
+
         <View style={styles.button}>
           <IconButton
             iconComponent={<Mail name="mail" size={30} color="#221712" />}
@@ -180,6 +175,7 @@ const styles = StyleSheet.create({
   },
   header: {
     alignItems: 'center',
+    justifyContent: 'space-between',
   },
   switchContainer: {
     width: '90%',
@@ -197,7 +193,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   image: {
-    width: 120,
+    width: 100,
     height: 120,
     alignItems: 'center',
     justifyContent: 'center',

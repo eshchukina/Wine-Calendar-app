@@ -183,7 +183,6 @@ const Calendar = ({navigation}) => {
         dayBackgroundImage={dayBackgroundImage}
         currentMonth={currentMonth}
       />
-
       <FlatList
         ref={flatListRef}
         showsVerticalScrollIndicator={false}
