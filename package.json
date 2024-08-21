@@ -24,7 +24,6 @@
     "react-native-screens": "^3.32.0",
     "react-native-splash-screen": "^3.3.0",
     "react-native-vector-icons": "^10.1.0",
-    "react-native-yandex-mobile-ads": "^0.9.1",
     "toggle-switch-react-native": "^3.3.0"
   },
   "devDependencies": {

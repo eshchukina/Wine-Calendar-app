@@ -13,7 +13,6 @@ import Calendar from 'react-native-vector-icons/EvilIcons';
 import DrawerMenu from '../sidemenu/DrawerMenu';
 import {useTranslation} from 'react-i18next';
 const screenWidth = Dimensions.get('window').width;
-import { MobileAds, BannerView, InterstitialAdManager, RewardedAdManager } from 'react-native-yandex-mobile-ads';
 
 export default function HomeScreen({navigation}) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -40,13 +39,6 @@ export default function HomeScreen({navigation}) {
   }, [drawerTranslateX, fadeAnim, isDrawerOpen]);
 
   const closeDrawer = () => {
-    InterstitialAdManager.showAd('R-M-11604980-1')
-  .then((didClick) => {
-    console.log('clicked: ' + didClick);
-  })
-  .catch((error) => {
-    console.log('error: ' + error);
-  });
     setIsDrawerOpen(false);
   };
 
