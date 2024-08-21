@@ -1,13 +1,14 @@
 import 'react-native-gesture-handler';
-import React from "react";
-import { StyleSheet, View } from "react-native";
-import AuthStack from "./src/navigation/AuthStack";
-import { NavigationContainer } from "@react-navigation/native";
-
-
+import React, {useEffect} from 'react';
+import {StyleSheet, View} from 'react-native';
+import AuthStack from './src/navigation/AuthStack';
+import {NavigationContainer} from '@react-navigation/native';
+import SplashScreen from 'react-native-splash-screen';
 
 export default function App() {
-
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
 
   return (
     <View style={styles.container}>
@@ -21,6 +22,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#c0bfb2",
+    backgroundColor: '#c0bfb2',
   },
 });
