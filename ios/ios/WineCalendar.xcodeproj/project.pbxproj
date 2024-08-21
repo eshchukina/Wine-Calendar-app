@@ -8,12 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* WineCalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* WineCalendarTests.m */; };
+		0C4FEBD62C75F996005EACAD /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FEBC22C75F996005EACAD /* AntDesign.ttf */; };
+		0C4FEBD72C75F996005EACAD /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FEBC32C75F996005EACAD /* Entypo.ttf */; };
+		0C4FEBD82C75F996005EACAD /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FEBC42C75F996005EACAD /* EvilIcons.ttf */; };
+		0C4FEBD92C75F996005EACAD /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FEBC52C75F996005EACAD /* Feather.ttf */; };
+		0C4FEBDA2C75F996005EACAD /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FEBC62C75F996005EACAD /* FontAwesome.ttf */; };
+		0C4FEBDB2C75F996005EACAD /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FEBC72C75F996005EACAD /* FontAwesome5_Brands.ttf */; };
+		0C4FEBDC2C75F996005EACAD /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FEBC82C75F996005EACAD /* FontAwesome5_Regular.ttf */; };
+		0C4FEBDD2C75F996005EACAD /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FEBC92C75F996005EACAD /* FontAwesome5_Solid.ttf */; };
+		0C4FEBDE2C75F996005EACAD /* FontAwesome6_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FEBCA2C75F996005EACAD /* FontAwesome6_Brands.ttf */; };
+		0C4FEBDF2C75F996005EACAD /* FontAwesome6_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FEBCB2C75F996005EACAD /* FontAwesome6_Regular.ttf */; };
+		0C4FEBE02C75F996005EACAD /* FontAwesome6_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FEBCC2C75F996005EACAD /* FontAwesome6_Solid.ttf */; };
+		0C4FEBE12C75F996005EACAD /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FEBCD2C75F996005EACAD /* Fontisto.ttf */; };
+		0C4FEBE22C75F996005EACAD /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FEBCE2C75F996005EACAD /* Foundation.ttf */; };
+		0C4FEBE32C75F996005EACAD /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FEBCF2C75F996005EACAD /* Ionicons.ttf */; };
+		0C4FEBE42C75F996005EACAD /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FEBD02C75F996005EACAD /* MaterialCommunityIcons.ttf */; };
+		0C4FEBE52C75F996005EACAD /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FEBD12C75F996005EACAD /* MaterialIcons.ttf */; };
+		0C4FEBE62C75F996005EACAD /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FEBD22C75F996005EACAD /* Octicons.ttf */; };
+		0C4FEBE72C75F996005EACAD /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FEBD32C75F996005EACAD /* SimpleLineIcons.ttf */; };
+		0C4FEBE82C75F996005EACAD /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FEBD42C75F996005EACAD /* Zocial.ttf */; };
 		0C80B921A6F3F58F76C31292 /* libPods-WineCalendar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-WineCalendar.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		4219311534FA426297B1299C /* Philosopher-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23896306CC564F5E8BE3BC3D /* Philosopher-Regular.ttf */; };
+		63533A6CF46441819FB57D2F /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A95503F5E554456C82174822 /* Pacifico-Regular.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-WineCalendar-WineCalendarTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-WineCalendar-WineCalendarTests.a */; };
+		7F691F665670478691204B14 /* OverlockSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 875C814D067347C79BE02213 /* OverlockSC-Regular.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		A8223C785529C467D3C01E73 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1F72B8304A7D42AEC8064DE7 /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,20 +53,43 @@
 		00E356EE1AD99517003FC87E /* WineCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WineCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* WineCalendarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WineCalendarTests.m; sourceTree = "<group>"; };
+		0C4FEBC22C75F996005EACAD /* AntDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AntDesign.ttf; sourceTree = "<group>"; };
+		0C4FEBC32C75F996005EACAD /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
+		0C4FEBC42C75F996005EACAD /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
+		0C4FEBC52C75F996005EACAD /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
+		0C4FEBC62C75F996005EACAD /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		0C4FEBC72C75F996005EACAD /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Brands.ttf; sourceTree = "<group>"; };
+		0C4FEBC82C75F996005EACAD /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Regular.ttf; sourceTree = "<group>"; };
+		0C4FEBC92C75F996005EACAD /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Solid.ttf; sourceTree = "<group>"; };
+		0C4FEBCA2C75F996005EACAD /* FontAwesome6_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome6_Brands.ttf; sourceTree = "<group>"; };
+		0C4FEBCB2C75F996005EACAD /* FontAwesome6_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome6_Regular.ttf; sourceTree = "<group>"; };
+		0C4FEBCC2C75F996005EACAD /* FontAwesome6_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome6_Solid.ttf; sourceTree = "<group>"; };
+		0C4FEBCD2C75F996005EACAD /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
+		0C4FEBCE2C75F996005EACAD /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
+		0C4FEBCF2C75F996005EACAD /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
+		0C4FEBD02C75F996005EACAD /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialCommunityIcons.ttf; sourceTree = "<group>"; };
+		0C4FEBD12C75F996005EACAD /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
+		0C4FEBD22C75F996005EACAD /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
+		0C4FEBD32C75F996005EACAD /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
+		0C4FEBD42C75F996005EACAD /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* WineCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WineCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = WineCalendar/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = WineCalendar/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = WineCalendar/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = WineCalendar/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = WineCalendar/main.m; sourceTree = "<group>"; };
-	    13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = WineCalendar/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = WineCalendar/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-WineCalendar-WineCalendarTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WineCalendar-WineCalendarTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F72B8304A7D42AEC8064DE7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = WineCalendar/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		23896306CC564F5E8BE3BC3D /* Philosopher-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Philosopher-Regular.ttf"; path = "../assets/fonts/Philosopher-Regular.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-WineCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WineCalendar.debug.xcconfig"; path = "Target Support Files/Pods-WineCalendar/Pods-WineCalendar.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-WineCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WineCalendar.release.xcconfig"; path = "Target Support Files/Pods-WineCalendar/Pods-WineCalendar.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-WineCalendar-WineCalendarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WineCalendar-WineCalendarTests.debug.xcconfig"; path = "Target Support Files/Pods-WineCalendar-WineCalendarTests/Pods-WineCalendar-WineCalendarTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-WineCalendar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WineCalendar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = WineCalendar/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		875C814D067347C79BE02213 /* OverlockSC-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OverlockSC-Regular.ttf"; path = "../assets/fonts/OverlockSC-Regular.ttf"; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-WineCalendar-WineCalendarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WineCalendar-WineCalendarTests.release.xcconfig"; path = "Target Support Files/Pods-WineCalendar-WineCalendarTests/Pods-WineCalendar-WineCalendarTests.release.xcconfig"; sourceTree = "<group>"; };
+		A95503F5E554456C82174822 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Pacifico-Regular.ttf"; path = "../assets/fonts/Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -84,6 +130,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0C4FEBD52C75F996005EACAD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0C4FEBC22C75F996005EACAD /* AntDesign.ttf */,
+				0C4FEBC32C75F996005EACAD /* Entypo.ttf */,
+				0C4FEBC42C75F996005EACAD /* EvilIcons.ttf */,
+				0C4FEBC52C75F996005EACAD /* Feather.ttf */,
+				0C4FEBC62C75F996005EACAD /* FontAwesome.ttf */,
+				0C4FEBC72C75F996005EACAD /* FontAwesome5_Brands.ttf */,
+				0C4FEBC82C75F996005EACAD /* FontAwesome5_Regular.ttf */,
+				0C4FEBC92C75F996005EACAD /* FontAwesome5_Solid.ttf */,
+				0C4FEBCA2C75F996005EACAD /* FontAwesome6_Brands.ttf */,
+				0C4FEBCB2C75F996005EACAD /* FontAwesome6_Regular.ttf */,
+				0C4FEBCC2C75F996005EACAD /* FontAwesome6_Solid.ttf */,
+				0C4FEBCD2C75F996005EACAD /* Fontisto.ttf */,
+				0C4FEBCE2C75F996005EACAD /* Foundation.ttf */,
+				0C4FEBCF2C75F996005EACAD /* Ionicons.ttf */,
+				0C4FEBD02C75F996005EACAD /* MaterialCommunityIcons.ttf */,
+				0C4FEBD12C75F996005EACAD /* MaterialIcons.ttf */,
+				0C4FEBD22C75F996005EACAD /* Octicons.ttf */,
+				0C4FEBD32C75F996005EACAD /* SimpleLineIcons.ttf */,
+				0C4FEBD42C75F996005EACAD /* Zocial.ttf */,
+			);
+			name = Fonts;
+			path = "../node_modules/react-native-vector-icons/Fonts";
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* WineCalendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +167,7 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
+				1F72B8304A7D42AEC8064DE7 /* PrivacyInfo.xcprivacy */,
 			);
 			name = WineCalendar;
 			sourceTree = "<group>";
@@ -118,12 +192,14 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				0C4FEBD52C75F996005EACAD /* Fonts */,
 				13B07FAE1A68108700A75B9A /* WineCalendar */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* WineCalendarTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				D3F3702CB7734775AD5DD1C2 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -148,6 +224,16 @@
 				89C6BE57DB24E9ADA2F236DE /* Pods-WineCalendar-WineCalendarTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D3F3702CB7734775AD5DD1C2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				875C814D067347C79BE02213 /* OverlockSC-Regular.ttf */,
+				A95503F5E554456C82174822 /* Pacifico-Regular.ttf */,
+				23896306CC564F5E8BE3BC3D /* Philosopher-Regular.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,8 +329,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C4FEBE12C75F996005EACAD /* Fontisto.ttf in Resources */,
+				0C4FEBE42C75F996005EACAD /* MaterialCommunityIcons.ttf in Resources */,
+				0C4FEBE82C75F996005EACAD /* Zocial.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				0C4FEBE62C75F996005EACAD /* Octicons.ttf in Resources */,
+				0C4FEBDA2C75F996005EACAD /* FontAwesome.ttf in Resources */,
+				0C4FEBE72C75F996005EACAD /* SimpleLineIcons.ttf in Resources */,
+				0C4FEBDC2C75F996005EACAD /* FontAwesome5_Regular.ttf in Resources */,
+				0C4FEBDF2C75F996005EACAD /* FontAwesome6_Regular.ttf in Resources */,
+				0C4FEBE52C75F996005EACAD /* MaterialIcons.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				0C4FEBD92C75F996005EACAD /* Feather.ttf in Resources */,
+				0C4FEBD62C75F996005EACAD /* AntDesign.ttf in Resources */,
+				A8223C785529C467D3C01E73 /* PrivacyInfo.xcprivacy in Resources */,
+				0C4FEBE22C75F996005EACAD /* Foundation.ttf in Resources */,
+				0C4FEBE32C75F996005EACAD /* Ionicons.ttf in Resources */,
+				0C4FEBDD2C75F996005EACAD /* FontAwesome5_Solid.ttf in Resources */,
+				0C4FEBE02C75F996005EACAD /* FontAwesome6_Solid.ttf in Resources */,
+				7F691F665670478691204B14 /* OverlockSC-Regular.ttf in Resources */,
+				0C4FEBD72C75F996005EACAD /* Entypo.ttf in Resources */,
+				0C4FEBDE2C75F996005EACAD /* FontAwesome6_Brands.ttf in Resources */,
+				63533A6CF46441819FB57D2F /* Pacifico-Regular.ttf in Resources */,
+				0C4FEBDB2C75F996005EACAD /* FontAwesome5_Brands.ttf in Resources */,
+				0C4FEBD82C75F996005EACAD /* EvilIcons.ttf in Resources */,
+				4219311534FA426297B1299C /* Philosopher-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +626,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CC = "";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -544,6 +654,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CXX = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
@@ -563,6 +674,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD = "";
+				LDPLUSPLUS = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -582,7 +695,13 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				USE_HERMES = true;
 			};
 			name = Debug;
 		};
@@ -590,6 +709,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CC = "";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -617,6 +737,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				CXX = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
@@ -629,6 +750,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD = "";
+				LDPLUSPLUS = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -647,7 +770,13 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				USE_HERMES = true;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

@@ -5939,11 +5939,6 @@ react-native-vector-icons@^10.1.0:
     prop-types "^15.7.2"
     yargs "^16.1.1"
 
-react-native-yandex-mobile-ads@^0.9.1:
-  version "0.9.1"
-  resolved "https://registry.npmjs.org/react-native-yandex-mobile-ads/-/react-native-yandex-mobile-ads-0.9.1.tgz"
-  integrity sha512-Rp0SCG4BIZbXRpRW6iDu8OLjVnD3ZXZpm+KF8+c7hASFtNz024S2g8MZZHL5QjEjE0WzzMiLxCj5IBGmMDr/9Q==
-
 react-native@*, "react-native@^0.0.0-0 || >=0.60 <1.0", react-native@>=0.47.1, react-native@>=0.57.0, react-native@0.74.3:
   version "0.74.3"
   resolved "https://registry.npmjs.org/react-native/-/react-native-0.74.3.tgz"

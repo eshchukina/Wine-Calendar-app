@@ -1,0 +1,17 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/OverlockSC-Regular.ttf",
+      "sha1": "9ab8afd3aceb1ee067375de32dc0b09717e7edac"
+    },
+    {
+      "path": "assets/fonts/Pacifico-Regular.ttf",
+      "sha1": "baca1fca7fe74b61cb33aa0da48ec1a3a77bcf49"
+    },
+    {
+      "path": "assets/fonts/Philosopher-Regular.ttf",
+      "sha1": "7f657c9effe4d5d8377e72716f2d982cc10a1847"
+    }
+  ]
+}
