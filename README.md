@@ -15,3 +15,4 @@ Download the app now and start creating your wine journey!
 ![screenshot 6](https://github.com/eshchukina/Wine-Calendar-app/blob/main/assets/screesnhoots/Screenshot_20240703_204014.png)
 ![screenshot 7](https://github.com/eshchukina/Wine-Calendar-app/blob/main/assets/screesnhoots/Screenshot_20240703_204023.png)
 
+
