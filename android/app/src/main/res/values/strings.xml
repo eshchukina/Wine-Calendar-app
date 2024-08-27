@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">WineCalendar</string>
+         <color name="app_background">#771011</color>
+
 </resources>

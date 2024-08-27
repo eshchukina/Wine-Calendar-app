@@ -1,7 +1,8 @@
-import React, {useEffect, useState} from 'react';
-import {View, Text, StyleSheet, Modal} from 'react-native';
-import {useTranslation} from 'react-i18next';
+import React, { useEffect, useState } from 'react';
+import { View, Text, StyleSheet, Modal, Dimensions } from 'react-native';
+import { useTranslation } from 'react-i18next';
 import Button from '../buttons/Button';
+import { LineChart } from 'react-native-chart-kit';
 
 const WineDaysStats = ({
   dayBackgroundImage,
@@ -10,7 +11,7 @@ const WineDaysStats = ({
   onClose,
 }) => {
   const [wineDaysCountByMonth, setWineDaysCountByMonth] = useState([]);
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const calculateWineDaysByMonth = () => {
@@ -28,6 +29,7 @@ const WineDaysStats = ({
         t('november'),
         t('december'),
       ];
+      const monthsShort = months.map(month => month.charAt(0));
       const counts = new Array(12).fill(0);
       const year = currentMonth.getFullYear();
 
@@ -42,7 +44,7 @@ const WineDaysStats = ({
       }
 
       setWineDaysCountByMonth(
-        months.map((month, index) => ({
+        monthsShort.map((month, index) => ({
           month,
           count: counts[index],
         })),
@@ -52,15 +54,7 @@ const WineDaysStats = ({
     calculateWineDaysByMonth();
   }, [dayBackgroundImage, currentMonth, t]);
 
-  const getMaxCount = () => {
-    let maxCount = 0;
-    wineDaysCountByMonth.forEach(({count}) => {
-      if (count > maxCount) {
-        maxCount = count;
-      }
-    });
-    return maxCount;
-  };
+  const screenWidth = Dimensions.get('window').width;
 
   return (
     <Modal
@@ -73,21 +67,42 @@ const WineDaysStats = ({
         <View style={styles.modalContent}>
           <View style={styles.container}>
             <Text style={styles.modalText}>{t('statistics')}</Text>
-            {wineDaysCountByMonth.map(({month, count}) => (
-              <Text
-                key={month}
-                style={[
-                  styles.statsText,
-                  month ===
-                  wineDaysCountByMonth.find(
-                    ({count}) => count === getMaxCount(),
-                  ).month
-                    ? styles.maxCountText
-                    : null,
-                ]}>
-                {month}: {count} {t('days')}
-              </Text>
-            ))}
+
+            <LineChart
+              data={{
+                labels: wineDaysCountByMonth.map(({ month }) => month),
+                datasets: [
+                  {
+                    data: wineDaysCountByMonth.map(({ count }) => count),
+                  },
+                ],
+              }}
+              width={screenWidth} // 80% of screen width
+              height={220}
+              yAxisLabel=""
+              yAxisInterval={1}
+              chartConfig={{
+                backgroundColor: '#c0bfb2',
+                backgroundGradientFrom: '#c0bfb2',
+                backgroundGradientTo: '#c0bfb2',
+                decimalPlaces: 0,
+                color: (opacity = 1) => `rgba(77, 83, 96, ${opacity})`,
+                labelColor: (opacity = 1) => `rgba(77, 83, 96, ${opacity})`,
+                style: {
+                  borderRadius: 16,
+                },
+                propsForDots: {
+                  r: '6',
+                  strokeWidth: '2',
+                  stroke: '#ffa726',
+                },
+              }}
+              bezier
+              style={{
+                marginVertical: 8,
+                borderRadius: 16,
+              }}
+            />
           </View>
 
           <Button
@@ -112,7 +127,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
   modalContent: {
-    width: '80%',
+    width: '100%',
     backgroundColor: '#c0bfb2',
     borderRadius: 20,
     paddingBottom: 20,
