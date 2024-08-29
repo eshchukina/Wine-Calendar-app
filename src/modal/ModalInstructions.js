@@ -1,11 +1,11 @@
 import React from 'react';
-import {View, Text, Modal, StyleSheet} from 'react-native';
+import { View, Text, Modal, StyleSheet } from 'react-native';
 import Button from '../buttons/Button';
 import Bottle from 'react-native-vector-icons/MaterialCommunityIcons';
-import {useTranslation} from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
-const ModalInstructions = ({visible, onClose}) => {
-  const {t} = useTranslation();
+const ModalInstructions = ({ visible, onClose }) => {
+  const { t } = useTranslation();
   return (
     <Modal
       animationType="fade"

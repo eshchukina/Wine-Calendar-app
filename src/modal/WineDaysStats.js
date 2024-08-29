@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, Modal, Dimensions } from 'react-native';
-import { useTranslation } from 'react-i18next';
+import React, {useEffect, useState} from 'react';
+import {View, Text, StyleSheet, Modal, Dimensions} from 'react-native';
+import {useTranslation} from 'react-i18next';
 import Button from '../buttons/Button';
-import { LineChart } from 'react-native-chart-kit';
+import {LineChart} from 'react-native-chart-kit';
 
 const WineDaysStats = ({
   dayBackgroundImage,
@@ -11,7 +11,7 @@ const WineDaysStats = ({
   onClose,
 }) => {
   const [wineDaysCountByMonth, setWineDaysCountByMonth] = useState([]);
-  const { t } = useTranslation();
+  const {t} = useTranslation();
 
   useEffect(() => {
     const calculateWineDaysByMonth = () => {
@@ -67,42 +67,43 @@ const WineDaysStats = ({
         <View style={styles.modalContent}>
           <View style={styles.container}>
             <Text style={styles.modalText}>{t('statistics')}</Text>
-
-            <LineChart
-              data={{
-                labels: wineDaysCountByMonth.map(({ month }) => month),
-                datasets: [
-                  {
-                    data: wineDaysCountByMonth.map(({ count }) => count),
+            <View style={styles.chartContainer}>
+              <LineChart
+                data={{
+                  labels: wineDaysCountByMonth.map(({month}) => month),
+                  datasets: [
+                    {
+                      data: wineDaysCountByMonth.map(({count}) => count),
+                    },
+                  ],
+                }}
+                width={screenWidth}
+                height={220}
+                yAxisLabel=""
+                yAxisInterval={1}
+                chartConfig={{
+                  backgroundColor: '#c0bfb2',
+                  backgroundGradientFrom: '#c0bfb2',
+                  backgroundGradientTo: '#c0bfb2',
+                  decimalPlaces: 0,
+                  color: (opacity = 1) => `#771011`,
+                  labelColor: (opacity = 1) => `#771011`,
+                  style: {
+                    borderRadius: 16,
                   },
-                ],
-              }}
-              width={screenWidth} // 80% of screen width
-              height={220}
-              yAxisLabel=""
-              yAxisInterval={1}
-              chartConfig={{
-                backgroundColor: '#c0bfb2',
-                backgroundGradientFrom: '#c0bfb2',
-                backgroundGradientTo: '#c0bfb2',
-                decimalPlaces: 0,
-                color: (opacity = 1) => `rgba(77, 83, 96, ${opacity})`,
-                labelColor: (opacity = 1) => `rgba(77, 83, 96, ${opacity})`,
-                style: {
+                  propsForDots: {
+                    r: '5',
+                    strokeWidth: '2',
+                    stroke: '#ece6d3',
+                  },
+                }}
+                bezier
+                style={{
+                  marginVertical: 1,
                   borderRadius: 16,
-                },
-                propsForDots: {
-                  r: '6',
-                  strokeWidth: '2',
-                  stroke: '#ffa726',
-                },
-              }}
-              bezier
-              style={{
-                marginVertical: 8,
-                borderRadius: 16,
-              }}
-            />
+                }}
+              />
+            </View>
           </View>
 
           <Button
@@ -152,6 +153,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 25,
     fontFamily: 'Pacifico-Regular',
+  },
+  chartContainer: {
+    right: 20,
   },
 });
 

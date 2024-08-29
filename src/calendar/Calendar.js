@@ -1,12 +1,20 @@
-import React, {useState, useEffect, useRef} from 'react';
-import {View, StyleSheet, FlatList, ActivityIndicator} from 'react-native';
+import React, {useState, useEffect, useRef, useMemo} from 'react';
+import {
+  View,
+  StyleSheet,
+  FlatList,
+  ActivityIndicator,
+  Image,
+} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import CalendarFooter from './CalendarFooter';
 import CalendarHeader from './CalendarHeader';
 import CalendarMonth from './CalendarMonth';
 import CalendarDay from './CalendarDay';
-const wineImagePath = '../../assets/wine.png';
-const wineWithoutImagePath = '../../assets/wineWithout.png';
+import FastImage from 'react-native-fast-image';
+
+const wineImage = require('../../assets/wine.png');
+const wineWithoutImage = require('../../assets/wineWithout.png');
 
 const Calendar = ({navigation}) => {
   const [currentMonth] = useState(new Date());
@@ -14,6 +22,43 @@ const Calendar = ({navigation}) => {
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
   const flatListRef = useRef(null);
+
+  useEffect(() => {
+    const preloadImages = async () => {
+      const images = [wineImage, wineWithoutImage];
+
+      const cacheImages = images.map(image => {
+        return {uri: Image.resolveAssetSource(image).uri};
+      });
+
+      await FastImage.preload(cacheImages);
+    };
+
+    preloadImages().then(() => setImagesLoaded(true));
+
+    const loadBackgroundImages = async () => {
+      try {
+        const storedImages = await AsyncStorage.getItem('backgroundImages');
+        if (storedImages) {
+          const parsedImages = JSON.parse(storedImages);
+          const loadedImages = Object.keys(parsedImages).reduce((acc, key) => {
+            acc[key] =
+              parsedImages[key] === '../../assets/wine.png'
+                ? wineImage
+                : wineWithoutImage;
+            return acc;
+          }, {});
+          setDayBackgroundImage(loadedImages);
+        }
+        setImagesLoaded(true);
+      } catch (error) {
+        console.error('Error loading background images:', error);
+        setImagesLoaded(true);
+      }
+    };
+
+    loadBackgroundImages();
+  }, []);
 
   useEffect(() => {
     if (flatListRef.current) {
@@ -32,7 +77,8 @@ const Calendar = ({navigation}) => {
     setModalVisible(false);
   };
 
-  const calculateWineDaysInYear = year => {
+  const calculateWineDaysInYear = useMemo(() => {
+    const year = currentMonth.getFullYear();
     const startOfYear = new Date(year, 0, 1);
     const endOfYear = new Date(year, 11, 31);
 
@@ -46,81 +92,53 @@ const Calendar = ({navigation}) => {
       const isoDateString = currentDate.toISOString();
       const backgroundImage = dayBackgroundImage[isoDateString];
 
-      if (
-        backgroundImage &&
-        backgroundImage === require('../../assets/wine.png')
-      ) {
+      if (backgroundImage && backgroundImage === wineImage) {
         wineDaysCount++;
       }
     }
 
     return wineDaysCount;
-  };
+  }, [currentMonth, dayBackgroundImage]);
 
-  useEffect(() => {
-    const loadBackgroundImages = async () => {
-      try {
-        const storedImages = await AsyncStorage.getItem('backgroundImages');
-        if (storedImages) {
-          const parsedImages = JSON.parse(storedImages);
-          const loadedImages = Object.keys(parsedImages).reduce((acc, key) => {
-            acc[key] =
-              parsedImages[key] === wineImagePath
-                ? require(wineImagePath)
-                : require(wineWithoutImagePath);
-            return acc;
-          }, {});
-          setDayBackgroundImage(loadedImages);
-        }
-        setImagesLoaded(true);
-      } catch (error) {
-        console.error('Error loading background images:', error);
-        setImagesLoaded(true);
+  const daysInMonth = (month, year) => new Date(year, month + 1, 0).getDate();
+
+  const getMonthData = useMemo(
+    () => (year, month) => {
+      const firstDay = new Date(year, month, 1);
+      const startingDay = (firstDay.getDay() + 6) % 7;
+      const lastDay = new Date(year, month + 1, 0);
+      const days = [];
+
+      for (let i = 0; i < startingDay; i++) {
+        days.push(null);
       }
-    };
 
-    loadBackgroundImages();
-  }, []);
+      for (let i = 1; i <= daysInMonth(month, year); i++) {
+        days.push(new Date(year, month, i));
+      }
 
-  const daysInMonth = (month, year) => {
-    return new Date(year, month + 1, 0).getDate();
-  };
-
-  const getMonthData = (year, month) => {
-    const firstDay = new Date(year, month, 1);
-    const startingDay = (firstDay.getDay() + 6) % 7;
-    const lastDay = new Date(year, month + 1, 0);
-    const days = [];
-
-    for (let i = 0; i < startingDay; i++) {
-      days.push(null);
-    }
-
-    for (let i = 1; i <= daysInMonth(month, year); i++) {
-      days.push(new Date(year, month, i));
-    }
-    return {firstDay, lastDay, days};
-  };
+      return {firstDay, lastDay, days};
+    },
+    [],
+  );
 
   const handleDayPress = async day => {
     const isoDateString = day.toISOString();
     const backgroundImage =
-      dayBackgroundImage[isoDateString] || require(wineWithoutImagePath);
-    const isWine = backgroundImage === require(wineImagePath);
+      dayBackgroundImage[isoDateString] || wineWithoutImage;
+    const isWine = backgroundImage === wineImage;
 
     const updatedImages = {
       ...dayBackgroundImage,
-      [isoDateString]: isWine
-        ? require(wineWithoutImagePath)
-        : require(wineImagePath),
+      [isoDateString]: isWine ? wineWithoutImage : wineImage,
     };
 
     try {
       const imagePaths = Object.keys(updatedImages).reduce((acc, key) => {
         acc[key] =
-          updatedImages[key] === require(wineImagePath)
-            ? wineImagePath
-            : wineWithoutImagePath;
+          updatedImages[key] === wineImage
+            ? '../../assets/wine.png'
+            : '../../assets/wineWithout.png';
         return acc;
       }, {});
       await AsyncStorage.setItem(
@@ -140,14 +158,14 @@ const Calendar = ({navigation}) => {
       const {days} = getMonthData(currentMonth.getFullYear(), i);
       days.forEach(day => {
         if (day) {
-          updatedImages[day.toISOString()] = require(wineWithoutImagePath);
+          updatedImages[day.toISOString()] = wineWithoutImage;
         }
       });
     }
 
     try {
       const imagePaths = Object.keys(updatedImages).reduce((acc, key) => {
-        acc[key] = wineWithoutImagePath;
+        acc[key] = '../../assets/wineWithout.png';
         return acc;
       }, {});
       await AsyncStorage.setItem(
@@ -160,9 +178,13 @@ const Calendar = ({navigation}) => {
     }
   };
 
-  const monthsData = Array.from(
-    {length: 12},
-    (_, index) => new Date(currentMonth.getFullYear(), index),
+  const monthsData = useMemo(
+    () =>
+      Array.from(
+        {length: 12},
+        (_, index) => new Date(currentMonth.getFullYear(), index),
+      ),
+    [currentMonth],
   );
 
   if (!imagesLoaded) {
@@ -214,7 +236,7 @@ const Calendar = ({navigation}) => {
         }}
         ListFooterComponent={
           <CalendarFooter
-            wineDaysInYear={calculateWineDaysInYear(currentMonth.getFullYear())}
+            wineDaysInYear={calculateWineDaysInYear}
             resetAllDays={resetAllDays}
           />
         }

@@ -80,13 +80,9 @@ android {
         applicationId "com.winecalendar"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-<<<<<<< HEAD
-        versionCode 3
-=======
 
-        versionCode 4
+        versionCode 5
 
->>>>>>> 8472e2a357e66e7f4d6a822dd1605db248d8cfb3
         versionName "1.0"
     }
     signingConfigs {
